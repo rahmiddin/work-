@@ -51,10 +51,8 @@ def generate_game():
 
 
 def get_score(game_stamps, offset):
-    '''
-        Takes list of game's stamps and time offset for which returns the scores for the home and away teams.
-        Please pay attention to that for some offsets the game_stamps list may not contain scores.
-    '''
+    # Я использовал алгоритм бинарного поиска для того чтобы нужный offset был найден быстрее
+    # На случай если диопазон придется перебирать больше game_stamp
     
     low = 0
     hight = len(game_stamps) - 1
